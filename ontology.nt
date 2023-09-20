@@ -1,0 +1,212 @@
+<https://w3id.org/brot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/brot#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/brot/0.21> .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Al-Hakam Hamdan" .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Taras Kozak" .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/description> "Ontology that defines the topology of zones and components of bridge constructions"@en .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/1.0" .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/modified> "29th March 2022" .
+<https://w3id.org/brot#> <http://purl.org/dc/terms/title> "Bridge Topology Ontology"@en .
+<https://w3id.org/brot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "brot" .
+<https://w3id.org/brot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/brot#" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/#domainIncludes
+<http://schema.org/#domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/#rangeIncludes
+<http://schema.org/#rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/brot#adjacentComponent
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#adjacentComponent> <http://schema.org/#domainIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#adjacentComponent> <http://schema.org/#domainIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation zwischen Componenten und Zonen, die durch eine Berührungsfläche einen physikalischen Kontakt miteinander haben."@de .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between Components and zones which have physical contact to each other."@en .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent Component"@en .
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/2000/01/rdf-schema#label> "benachbartes Component"@de .
+# 
+# https://w3id.org/brot#adjacentZone
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#adjacentZone> <http://schema.org/#domainIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#adjacentZone> <http://schema.org/#domainIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between two adjacent Zones."@en .
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent zone"@en .
+<https://w3id.org/brot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "benachbarte Zone"@de .
+# 
+# https://w3id.org/brot#aggregates
+<https://w3id.org/brot#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Component and an aggregated Component as subcomponent."@en .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "aggregates"@en .
+<https://w3id.org/brot#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "beinhaltet"@de .
+# 
+# https://w3id.org/brot#containsComponent
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/brot#containsComponent> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/brot#aggregates> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/brot#containsZone> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/brot#containsComponent> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a SpatialZone and its contained Component"@en .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2000/01/rdf-schema#label> "contains Component"@en .
+<https://w3id.org/brot#containsComponent> <http://www.w3.org/2000/01/rdf-schema#label> "enthält Component"@de .
+# 
+# https://w3id.org/brot#containsZone
+<https://w3id.org/brot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a SpatialZone and another contained SpatialZone (subzone)"@en .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contains zone"@en .
+<https://w3id.org/brot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "enthält Zone"@de .
+# 
+# https://w3id.org/brot#hasCoating
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Coating> .
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Component and its applied Coating."@en .
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/2000/01/rdf-schema#label> "has coating"@en .
+<https://w3id.org/brot#hasCoating> <http://www.w3.org/2000/01/rdf-schema#label> "hat Beschichtung"@de .
+# 
+# https://w3id.org/brot#hasJoint
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Joint> .
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Component and an aggregated Joint."@en .
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/2000/01/rdf-schema#label> "has joint"@en .
+<https://w3id.org/brot#hasJoint> <http://www.w3.org/2000/01/rdf-schema#label> "hat Fuge"@de .
+# 
+# https://w3id.org/brot#locatedAbove
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/brot#locatedBelow> .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brot#locatedAbove> <http://schema.org/#domainIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#locatedAbove> <http://schema.org/#domainIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#locatedAbove> <http://schema.org/#rangeIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#locatedAbove> <http://schema.org/#rangeIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Relation stellt dar, dass ein Component sich über einem anderen befindet. Die Componente sind nicht gezwungen einen physicalischen bzw. logischen Kontakt zu haben. Die Relation zeigt bloß das räumliche Verhalten."@de .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/2000/01/rdf-schema#comment> "This relationship points that in a modell an Component located above an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude."@en .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/2000/01/rdf-schema#label> "befindet sich über"@de .
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/2000/01/rdf-schema#label> "located above"@en .
+# 
+# https://w3id.org/brot#locatedBelow
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brot#locatedBelow> <http://schema.org/#domainIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#locatedBelow> <http://schema.org/#domainIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#locatedBelow> <http://schema.org/#rangeIncludes> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#locatedBelow> <http://schema.org/#rangeIncludes> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Relation stellt dar, dass ein Component sich unter einem anderen befindet. Die Componente sind nicht gezwungen einen physicalischen bzw. logischen Kontakt zu haben. Die Relation zeigt bloß das räumliche Verhalten."@de .
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/2000/01/rdf-schema#comment> "This relationship points that in a modell an Component located below an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude."@en .
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/2000/01/rdf-schema#label> "befindet sich unter"@de .
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/2000/01/rdf-schema#label> "located below"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Person
+# 
+# https://w3id.org/brot#Bridge
+<https://w3id.org/brot#Bridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#comment> "An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes."@en .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge"@en .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#label> "Brücke"@de .
+# 
+# https://w3id.org/brot#Coating
+<https://w3id.org/brot#Coating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Coating> <http://www.w3.org/2000/01/rdf-schema#comment> "Covering that is applied to the surface of a Component. The purpose of applying Coating may be decorative, functional, or both."@en .
+<https://w3id.org/brot#Coating> <http://www.w3.org/2000/01/rdf-schema#label> "Abdichtung"@de .
+<https://w3id.org/brot#Coating> <http://www.w3.org/2000/01/rdf-schema#label> "Coating"@en .
+# 
+# https://w3id.org/brot#Component
+<https://w3id.org/brot#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that is contained in a bridge construction and has a characteristic technical function, form or position."@en .
+<https://w3id.org/brot#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Component"@en .
+<https://w3id.org/brot#Component> <http://www.w3.org/2000/01/rdf-schema#label> "BrueckenComponent"@de .
+# 
+# https://w3id.org/brot#Joint
+<https://w3id.org/brot#Joint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Joint> <http://www.w3.org/2000/01/rdf-schema#comment> "A desired or tolerance-related gap or interspace between two partial areas or components."@en .
+<https://w3id.org/brot#Joint> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Joint"@en .
+<https://w3id.org/brot#Joint> <http://www.w3.org/2000/01/rdf-schema#label> "Brückenfuge"@de .
+# 
+# https://w3id.org/brot#Site
+<https://w3id.org/brot#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Area containing one or more bridges"@en .
+<https://w3id.org/brot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Gelaende"@de .
+<https://w3id.org/brot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+# 
+# https://w3id.org/brot#SpatialZone
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial 3D division of a bridge or a site consisting of bridge related constructions."@en .
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Spatial Zone"@en .
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/2000/01/rdf-schema#label> "Räumliche Zone in Brücke"@de .
+# 
+# https://w3id.org/brot#SubStructure
+<https://w3id.org/brot#SubStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#SubStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#SubStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone that consists of Components, which serve to transfer the loads of the superstructure into the ground.\nLocated below the bridge deck."@en .
+<https://w3id.org/brot#SubStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Substructure"@en .
+<https://w3id.org/brot#SubStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Brückenunterbau"@de .
+# 
+# https://w3id.org/brot#SuperStructure
+<https://w3id.org/brot#SuperStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#SuperStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brot#SuperStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone that consists of Components that transfer loads to the SubStructure"@en .
+<https://w3id.org/brot#SuperStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Superstructure"@en .
+<https://w3id.org/brot#SuperStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Brückenüberbau"@de .
+# 
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid7 <http://xmlns.com/foaf/0.1/name> "Al-Hakam Hamdan" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid8 <http://xmlns.com/foaf/0.1/name> "Taras Kozak" .
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

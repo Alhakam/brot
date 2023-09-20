@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/brot#"
+     xml:base="https://w3id.org/brot"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/#">
+    <owl:Ontology rdf:about="https://w3id.org/brot#">
+        <owl:versionIRI rdf:resource="https://w3id.org/brot/0.21"/>
+        <terms:creator>
+            <rdf:Description rdf:nodeID="genid1">
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <foaf:name>Al-Hakam Hamdan</foaf:name>
+            </rdf:Description>
+        </terms:creator>
+        <terms:creator>
+            <rdf:Description rdf:nodeID="genid2">
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <foaf:name>Taras Kozak</foaf:name>
+            </rdf:Description>
+        </terms:creator>
+        <terms:description xml:lang="en">Ontology that defines the topology of zones and components of bridge constructions</terms:description>
+        <terms:license>https://creativecommons.org/licenses/by/1.0</terms:license>
+        <terms:modified>29th March 2022</terms:modified>
+        <terms:title xml:lang="en">Bridge Topology Ontology</terms:title>
+        <vann:preferredNamespacePrefix>brot</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/brot#</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/#domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/#domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/#rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/#rangeIncludes"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/brot#adjacentComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#adjacentComponent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="de">Relation zwischen Componenten und Zonen, die durch eine Berührungsfläche einen physikalischen Kontakt miteinander haben.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between Components and zones which have physical contact to each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">adjacent Component</rdfs:label>
+        <rdfs:label xml:lang="de">benachbartes Component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#adjacentZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#adjacentZone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Relationship between two adjacent Zones.</rdfs:comment>
+        <rdfs:label xml:lang="en">adjacent zone</rdfs:label>
+        <rdfs:label xml:lang="de">benachbarte Zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#aggregates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#aggregates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="en">Relationship between a Component and an aggregated Component as subcomponent.</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregates</rdfs:label>
+        <rdfs:label xml:lang="de">beinhaltet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#containsComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#containsComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/brot#containsComponent"/>
+            <rdf:Description rdf:about="https://w3id.org/brot#aggregates"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/brot#containsZone"/>
+            <rdf:Description rdf:about="https://w3id.org/brot#containsComponent"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relationship between a SpatialZone and its contained Component</rdfs:comment>
+        <rdfs:label xml:lang="en">contains Component</rdfs:label>
+        <rdfs:label xml:lang="de">enthält Component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#containsZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#containsZone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Relationship between a SpatialZone and another contained SpatialZone (subzone)</rdfs:comment>
+        <rdfs:label xml:lang="en">contains zone</rdfs:label>
+        <rdfs:label xml:lang="de">enthält Zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#hasCoating -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#hasCoating">
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Coating"/>
+        <rdfs:comment xml:lang="en">Relationship between a Component and its applied Coating.</rdfs:comment>
+        <rdfs:label xml:lang="en">has coating</rdfs:label>
+        <rdfs:label xml:lang="de">hat Beschichtung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#hasJoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#hasJoint">
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Joint"/>
+        <rdfs:comment xml:lang="en">Relationship between a Component and an aggregated Joint.</rdfs:comment>
+        <rdfs:label xml:lang="en">has joint</rdfs:label>
+        <rdfs:label xml:lang="de">hat Fuge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#locatedAbove -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#locatedAbove">
+        <owl:inverseOf rdf:resource="https://w3id.org/brot#locatedBelow"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="de">Diese Relation stellt dar, dass ein Component sich über einem anderen befindet. Die Componente sind nicht gezwungen einen physicalischen bzw. logischen Kontakt zu haben. Die Relation zeigt bloß das räumliche Verhalten.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This relationship points that in a modell an Component located above an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude.</rdfs:comment>
+        <rdfs:label xml:lang="de">befindet sich über</rdfs:label>
+        <rdfs:label xml:lang="en">located above</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brot#locatedBelow -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#locatedBelow">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/brot#Component"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="de">Diese Relation stellt dar, dass ein Component sich unter einem anderen befindet. Die Componente sind nicht gezwungen einen physicalischen bzw. logischen Kontakt zu haben. Die Relation zeigt bloß das räumliche Verhalten.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This relationship points that in a modell an Component located below an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude.</rdfs:comment>
+        <rdfs:label xml:lang="de">befindet sich unter</rdfs:label>
+        <rdfs:label xml:lang="en">located below</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/brot#Bridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Bridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge</rdfs:label>
+        <rdfs:label xml:lang="de">Brücke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Coating -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Coating">
+        <rdfs:comment xml:lang="en">Covering that is applied to the surface of a Component. The purpose of applying Coating may be decorative, functional, or both.</rdfs:comment>
+        <rdfs:label xml:lang="de">Abdichtung</rdfs:label>
+        <rdfs:label xml:lang="en">Coating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Component -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Component">
+        <rdfs:comment xml:lang="en">Component that is contained in a bridge construction and has a characteristic technical function, form or position.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge Component</rdfs:label>
+        <rdfs:label xml:lang="de">BrueckenComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Joint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Joint">
+        <rdfs:comment xml:lang="en">A desired or tolerance-related gap or interspace between two partial areas or components.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge Joint</rdfs:label>
+        <rdfs:label xml:lang="de">Brückenfuge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Site -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Site">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Area containing one or more bridges</rdfs:comment>
+        <rdfs:label xml:lang="de">Gelaende</rdfs:label>
+        <rdfs:label xml:lang="en">Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#SpatialZone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#SpatialZone">
+        <rdfs:comment xml:lang="en">A spatial 3D division of a bridge or a site consisting of bridge related constructions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge Spatial Zone</rdfs:label>
+        <rdfs:label xml:lang="de">Räumliche Zone in Brücke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#SubStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#SubStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Zone that consists of Components, which serve to transfer the loads of the superstructure into the ground.
+Located below the bridge deck.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge Substructure</rdfs:label>
+        <rdfs:label xml:lang="de">Brückenunterbau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#SuperStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#SuperStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Zone that consists of Components that transfer loads to the SubStructure</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge Superstructure</rdfs:label>
+        <rdfs:label xml:lang="de">Brückenüberbau</rdfs:label>
+    </owl:Class>
+    <rdf:Description rdf:nodeID="genid7">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Al-Hakam Hamdan</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Taras Kozak</foaf:name>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

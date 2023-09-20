@@ -1,0 +1,472 @@
+<html><h2 id="crossreference" class="list">Cross reference for Bridge Topology Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Bridge Topology Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Bridge" title="https://w3id.org/brot#Bridge">Bridge</a>
+      </li>
+      <li>
+         <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+      </li>
+      <li>
+         <a href="#Joint" title="https://w3id.org/brot#Joint">Bridge Joint</a>
+      </li>
+      <li>
+         <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+      </li>
+      <li>
+         <a href="#SubStructure" title="https://w3id.org/brot#SubStructure">Bridge Substructure</a>
+      </li>
+      <li>
+         <a href="#SuperStructure" title="https://w3id.org/brot#SuperStructure">Bridge Superstructure</a>
+      </li>
+      <li>
+         <a href="#Coating" title="https://w3id.org/brot#Coating">Coating</a>
+      </li>
+      <li>
+         <a href="#Site" title="https://w3id.org/brot#Site">Site</a>
+      </li>
+   </ul>
+   <div class="entity" id="Bridge">
+      <h3>Bridge<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#Bridge</p>
+      <div class="comment">
+         <span class="markdown">An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Component">
+      <h3>Bridge Component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#Component</p>
+      <div class="comment">
+         <span class="markdown">Component that is contained in a bridge construction and has a characteristic technical function, form or position.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#aggregates" title="https://w3id.org/brot#aggregates">aggregates</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCoating" title="https://w3id.org/brot#hasCoating">has coating</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasJoint" title="https://w3id.org/brot#hasJoint">has joint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#adjacentComponent" title="https://w3id.org/brot#adjacentComponent">adjacent Component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#aggregates" title="https://w3id.org/brot#aggregates">aggregates</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsComponent" title="https://w3id.org/brot#containsComponent">contains Component</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Joint">
+      <h3>Bridge Joint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#Joint</p>
+      <div class="comment">
+         <span class="markdown">A desired or tolerance-related gap or interspace between two partial areas or components.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasJoint" title="https://w3id.org/brot#hasJoint">has joint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SpatialZone">
+      <h3>Bridge Spatial Zone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#SpatialZone</p>
+      <div class="comment">
+         <span class="markdown">A spatial 3D division of a bridge or a site consisting of bridge related constructions.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Bridge" title="https://w3id.org/brot#Bridge">Bridge</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SubStructure" title="https://w3id.org/brot#SubStructure">Bridge Substructure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SuperStructure" title="https://w3id.org/brot#SuperStructure">Bridge Superstructure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Site" title="https://w3id.org/brot#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#containsComponent" title="https://w3id.org/brot#containsComponent">contains Component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsZone" title="https://w3id.org/brot#containsZone">contains zone</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#adjacentZone" title="https://w3id.org/brot#adjacentZone">adjacent zone</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsZone" title="https://w3id.org/brot#containsZone">contains zone</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SubStructure">
+      <h3>Bridge Substructure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#SubStructure</p>
+      <div class="comment">
+         <span class="markdown">Zone that consists of Components, which serve to transfer the loads of the superstructure into the ground.
+Located below the bridge deck.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SuperStructure">
+      <h3>Bridge Superstructure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#SuperStructure</p>
+      <div class="comment">
+         <span class="markdown">Zone that consists of Components that transfer loads to the SubStructure</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Coating">
+      <h3>Coating<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#Coating</p>
+      <div class="comment">
+         <span class="markdown">Covering that is applied to the surface of a Component. The purpose of applying Coating may be decorative, functional, or both.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCoating" title="https://w3id.org/brot#hasCoating">has coating</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Site">
+      <h3>Site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#Site</p>
+      <div class="comment">
+         <span class="markdown">Area containing one or more bridges</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#adjacentComponent" title="https://w3id.org/brot#adjacentComponent">adjacent Component</a>
+      </li>
+      <li>
+         <a href="#adjacentZone" title="https://w3id.org/brot#adjacentZone">adjacent zone</a>
+      </li>
+      <li>
+         <a href="#aggregates" title="https://w3id.org/brot#aggregates">aggregates</a>
+      </li>
+      <li>
+         <a href="#containsComponent" title="https://w3id.org/brot#containsComponent">contains Component</a>
+      </li>
+      <li>
+         <a href="#containsZone" title="https://w3id.org/brot#containsZone">contains zone</a>
+      </li>
+      <li>
+         <a href="#hasCoating" title="https://w3id.org/brot#hasCoating">has coating</a>
+      </li>
+      <li>
+         <a href="#hasJoint" title="https://w3id.org/brot#hasJoint">has joint</a>
+      </li>
+      <li>
+         <a href="#locatedAbove" title="https://w3id.org/brot#locatedAbove">located above</a>
+      </li>
+      <li>
+         <a href="#locatedBelow" title="https://w3id.org/brot#locatedBelow">located below</a>
+      </li>
+   </ul>
+   <div class="entity" id="adjacentComponent">
+      <h3>adjacent Component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#adjacentComponent</p>
+      <div class="comment">
+         <span class="markdown">Relationship between Components and zones which have physical contact to each other.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="adjacentZone">
+      <h3>adjacent zone<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#adjacentZone</p>
+      <div class="comment">
+         <span class="markdown">Relationship between two adjacent Zones.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="aggregates">
+      <h3>aggregates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#aggregates</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a Component and an aggregated Component as subcomponent.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containsComponent">
+      <h3>contains Component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#containsComponent</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a SpatialZone and its contained Component</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#containsComponent" title="https://w3id.org/brot#containsComponent">contains Component</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#aggregates" title="https://w3id.org/brot#aggregates">aggregates</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dd>
+               <a href="#containsZone" title="https://w3id.org/brot#containsZone">contains zone</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#containsComponent" title="https://w3id.org/brot#containsComponent">contains Component</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containsZone">
+      <h3>contains zone<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#containsZone</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a SpatialZone and another contained SpatialZone (subzone)</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialZone" title="https://w3id.org/brot#SpatialZone">Bridge Spatial Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCoating">
+      <h3>has coating<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#hasCoating</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a Component and its applied Coating.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coating" title="https://w3id.org/brot#Coating">Coating</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasJoint">
+      <h3>has joint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#hasJoint</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a Component and an aggregated Joint.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/brot#Component">Bridge Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Joint" title="https://w3id.org/brot#Joint">Bridge Joint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedAbove">
+      <h3>located above<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#locatedAbove</p>
+      <div class="comment">
+         <span class="markdown">This relationship points that in a modell an Component located above an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#locatedBelow" title="https://w3id.org/brot#locatedBelow">located below</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedBelow">
+      <h3>located below<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/brot#locatedBelow</p>
+      <div class="comment">
+         <span class="markdown">This relationship points that in a modell an Component located below an another Component. The Components are not obliged to have a physical or logical connection. The relationship shows only space atittude.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#locatedAbove" title="https://w3id.org/brot#locatedAbove">located above</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</html>
