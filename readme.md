@@ -10,7 +10,7 @@ BROT is based on the Building Topology Ontology (BOT) and therefore reuses vario
 
 ## Contributors
 
-([Al-Hakam Hamdan](https://github.com/Alhakam) - TU Dresden
+[Al-Hakam Hamdan](https://github.com/Alhakam) - TU Dresden
 Taras Kozak - Krebs & Kiefer
 
 ## References
