@@ -29,7 +29,7 @@
 #    Object Properties
 #################################################################
 
-###  https://wisib.de/ontologie/brot#adjacentComponent
+###  https://w3id.org/brot#adjacentComponent
 brot:adjacentComponent rdf:type owl:ObjectProperty ,
                               owl:SymmetricProperty ;
                      schema:domainIncludes brot:Component ,
@@ -41,7 +41,7 @@ brot:adjacentComponent rdf:type owl:ObjectProperty ,
                                 "benachbartes Component"@de .
 
 
-###  https://wisib.de/ontologie/brot#adjacentZone
+###  https://w3id.org/brot#adjacentZone
 brot:adjacentZone rdf:type owl:ObjectProperty ,
                            owl:SymmetricProperty ;
                   schema:domainIncludes brot:Component ,
@@ -52,7 +52,7 @@ brot:adjacentZone rdf:type owl:ObjectProperty ,
                              "benachbarte Zone"@de .
 
 
-###  https://wisib.de/ontologie/brot#aggregates
+###  https://w3id.org/brot#aggregates
 brot:aggregates rdf:type owl:ObjectProperty ,
                          owl:TransitiveProperty ;
                 rdfs:domain brot:Component ;
@@ -62,7 +62,7 @@ brot:aggregates rdf:type owl:ObjectProperty ,
                            "beinhaltet"@de .
 
 
-###  https://wisib.de/ontologie/brot#containsComponent
+###  https://w3id.org/brot#containsComponent
 brot:containsComponent rdf:type owl:ObjectProperty ;
                      rdfs:domain brot:SpatialZone ;
                      rdfs:range brot:Component ;
@@ -77,7 +77,7 @@ brot:containsComponent rdf:type owl:ObjectProperty ;
                                 "enthält Component"@de .
 
 
-###  https://wisib.de/ontologie/brot#containsZone
+###  https://w3id.org/brot#containsZone
 brot:containsZone rdf:type owl:ObjectProperty ,
                            owl:TransitiveProperty ;
                   rdfs:domain brot:SpatialZone ;
@@ -87,7 +87,7 @@ brot:containsZone rdf:type owl:ObjectProperty ,
                              "enthält Zone"@de .
 
 
-###  https://wisib.de/ontologie/brot#hasCoating
+###  https://w3id.org/brot#hasCoating
 brot:hasCoating rdf:type owl:ObjectProperty ;
                 rdfs:domain brot:Component ;
                 rdfs:range brot:Coating ;
@@ -96,7 +96,7 @@ brot:hasCoating rdf:type owl:ObjectProperty ;
                            "hat Beschichtung"@de .
 
 
-###  https://wisib.de/ontologie/brot#hasJoint
+###  https://w3id.org/brot#hasJoint
 brot:hasJoint rdf:type owl:ObjectProperty ;
               rdfs:domain brot:Component ;
               rdfs:range brot:Joint ;
@@ -105,7 +105,7 @@ brot:hasJoint rdf:type owl:ObjectProperty ;
                          "hat Fuge"@de .
 
 
-###  https://wisib.de/ontologie/brot#locatedAbove
+###  https://w3id.org/brot#locatedAbove
 brot:locatedAbove rdf:type owl:ObjectProperty ;
                   owl:inverseOf brot:locatedBelow ;
                   rdf:type owl:TransitiveProperty ;
@@ -119,7 +119,7 @@ brot:locatedAbove rdf:type owl:ObjectProperty ;
                                 "befindet sich über"@de .
 
 
-###  https://wisib.de/ontologie/brot#locatedBelow
+###  https://w3id.org/brot#locatedBelow
 brot:locatedBelow rdf:type owl:ObjectProperty ,
                            owl:TransitiveProperty ;
                   schema:domainIncludes brot:Component ,
@@ -136,7 +136,7 @@ brot:locatedBelow rdf:type owl:ObjectProperty ,
 #    Classes
 #################################################################
 
-###  https://wisib.de/ontologie/brot#Bridge
+###  https://w3id.org/brot#Bridge
 brot:Bridge rdf:type owl:Class ;
             rdfs:subClassOf brot:SpatialZone ;
             rdfs:comment "An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes."@en ;
@@ -144,28 +144,28 @@ brot:Bridge rdf:type owl:Class ;
                        "Brücke"@de .
 
 
-###  https://wisib.de/ontologie/brot#Component
+###  https://w3id.org/brot#Component
 brot:Component rdf:type owl:Class ;
                    rdfs:comment "Component that is contained in a bridge construction and has a characteristic technical function, form or position."@en ;
                    rdfs:label "Bridge Component"@en ,
                               "BrueckenComponent"@de .
                               
 
-###  https://wisib.de/ontologie/brot#Joint
+###  https://w3id.org/brot#Joint
 brot:Joint rdf:type owl:Class ;
                  rdfs:comment "A desired or tolerance-related gap or interspace between two partial areas or components."@en ;
                  rdfs:label "Bridge Joint"@en ,
                             "Brückenfuge"@de .
 
 
-###  https://wisib.de/ontologie/brot#SpatialZone
+###  https://w3id.org/brot#SpatialZone
 brot:SpatialZone rdf:type owl:Class ;
                        rdfs:comment "A spatial 3D division of a bridge or a site consisting of bridge related constructions."@en ;
                        rdfs:label "Bridge Spatial Zone"@en ,
                                   "Räumliche Zone in Brücke"@de .
 
 
-###  https://wisib.de/ontologie/brot#SubStructure
+###  https://w3id.org/brot#SubStructure
 brot:SubStructure rdf:type owl:Class ;
                         rdfs:subClassOf brot:SpatialZone ;
                         rdfs:comment """Zone that consists of Components, which serve to transfer the loads of the superstructure into the ground.
@@ -174,7 +174,7 @@ Located below the bridge deck."""@en ;
                                    "Brückenunterbau"@de .
 
 
-###  https://wisib.de/ontologie/brot#SuperStructure
+###  https://w3id.org/brot#SuperStructure
 brot:SuperStructure rdf:type owl:Class ;
                           rdfs:subClassOf brot:SpatialZone ;
                           rdfs:comment "Zone that consists of Components that transfer loads to the SubStructure"@en ;
@@ -182,14 +182,14 @@ brot:SuperStructure rdf:type owl:Class ;
                                      "Brückenüberbau"@de .
 
 
-###  https://wisib.de/ontologie/brot#Coating
+###  https://w3id.org/brot#Coating
 brot:Coating rdf:type owl:Class ;
              rdfs:comment "Covering that is applied to the surface of a Component. The purpose of applying Coating may be decorative, functional, or both."@en ;
              rdfs:label "Abdichtung"@de ,
                         "Coating"@en .
 
 
-###  https://wisib.de/ontologie/brot#Site
+###  https://w3id.org/brot#Site
 brot:Site rdf:type owl:Class ;
           rdfs:subClassOf brot:SpatialZone ;
           rdfs:comment "Area containing one or more bridges"@en ;
